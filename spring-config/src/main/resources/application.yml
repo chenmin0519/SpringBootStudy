@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+swagger:
+  apis:
+    user:
+      packageName: com.chenmin.api.controller
+      author:
+        name: chenmin
+chenmin:
+  name: chenmin
+  age: 23
+  sex: 男
+
