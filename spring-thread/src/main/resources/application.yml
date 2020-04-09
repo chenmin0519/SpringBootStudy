@@ -1,0 +1,45 @@
+---
+spring:
+  profiles : dev
+  datasource:
+    name: thread
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://cdb-a6qng4qq.cd.tencentcdb.com:10022/basic?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: root
+    password: Yizhi@2019
+    driver-class-name: com.mysql.jdbc.Driver
+    minIdle: 3
+    maxActive: 50
+    initialSize: 10
+    timeBetweenEvictionRunsMillis: 3000
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: select 1
+    testWhileIdle: true
+    testOnBorrow: true
+    testOnReturn: true
+  jackson:
+    default-property-inclusion: non_null
+    joda-date-time-format: yyyy-MM-dd HH:mm:ss
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+logging:
+  level:
+    tk.mybatis: TRACE
+    com.chenmin: TRACE
+server:
+  port: 8080
+
+swagger:
+  apis:
+    user:
+      packageName: com.chenmin.api.controller
+      author:
+        name: chenmin
+chenmin:
+  name: chenmin
+  age: 23
+  sex: 男
+---
+
