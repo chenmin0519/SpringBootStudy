@@ -1,0 +1,27 @@
+server:
+  port: 8112
+spring:
+  application: test
+  cloud:
+    sentinel:
+      transport:
+        port: 9112
+        dashboard: localhost:8080
+        heartbeat-interval-ms: 500
+        eager: true
+      datasource:
+        ds1:
+          file:
+            file: classpath:flowrule.json
+            data-type: json
+            rule-type: flow
+chenmin:
+  url: http://localhost:8112/sss
+  name: chenmin
+#        ds2:
+#          nacos:
+#            server-addr: localhost:8848
+#            data-id: sentinel
+#            group-id: DEFAULT_GROUP
+#            data-type: json
+#            rule-type: degrade
